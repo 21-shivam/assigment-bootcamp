@@ -1,0 +1,81 @@
+Binary information in digital computers is stored in memory or processor 
+registers. Registers contain either data or control information. Control information Is a bit or a group of bits used to specify the sequence of command signals 
+needed for manipulation of the data iJ'I other registers. Data are numbers and 
+other binary-<:oded information that are operated on to achieve required computational results. In this chapter we present the most common types of data 
+found in digital compute.rs and show how the various data types are represented in binary-<:oded form iJ'I computer registers. 
+The data types found iJ'I the registers of digital computers may be classified as beirlg one of the foUowing categories: {1) numbers used in arithmetic 
+computations, (2) letters of the alphabet used in data processing. and {3) other 
+discrete symbols used for specific purposes. All types of data, except binary 
+numbers, are represented in computer registers in binary<Oded form. This is 
+because registers are made up of flip-flops and flip-flops are two-state devires 
+that can store only l's and O's. The binary number system is the most natural 
+system to 
+differe
+use in a digital computer. But sometimes it is convenient to employ 
+nt number systems, espedally the decimal number system, since it is 
+used by people to perform arithmetic computations. 
+67 
+68 CHAPTER THREE Data Representation 
+radix 
+decimal 
+binary 
+octal 
+herademical 
+contJeTSion 
+Number Systems 
+A number system of base, or radix, r is a system that uses distinct symbols for 
+r digits. Numbers are represented by a string of digit symbols. To determine 
+the quantity that the number represents, it is necessary to multiply each digit 
+by an integer power of r and then form the sum of all weighted digits. For 
+example, the decimal number system in everyday use employs the radix 10 
+system. The 10 symbols are 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. The string of digits 
+724.5 is interpreted to represent the quantity 
+7 X 102 + 2 X 101 + 4 X 10° + 5 X 10-1 
+that is, 7 hundreds, plus 2 tens, plus 4 units, plus 5 tenths. Every decimal 
+number can be similarly interpreted to find the quantity it represents. 
+The binary number system uses the radix 2. The two digit symbols used 
+are 0 and 1. The string of digits 101101 is interpreted to represent the quantity 
+1 x�+Ox�+ 1 x �+1x�+Ox�+1 x�=e 
+To distinguish between different radix numbers, the digits will be enclosed in 
+parentheses and the radix of the number inserted as a subscript. For example, 
+to show the equality between decimal and binary forty-five we will write 
+(101101), = (45)w. 
+Besides the decimal and binary number systems, the octal (radix 8) and 
+hexadecimal (radix 16) are important in digital computer work. The eight symbols of the octal system are 0, 1, 2, 3, 4, 5, 6, and 7. The 16 symbols of the 
+hexadecimal system are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, 0, E, and F. The last 
+six symbols are, unfortunately, identical to the letters of the alphabet and can 
+cause confusion at times. However, this is the convention that has been 
+adopted. When used to represent hexadecimal digits, the symbols A, B, C, D, 
+E, F correspond to the decimal numbers 10, 11, 12, 13, 14, 15, respectively. 
+A number in radix r can be converted to the familiar decimal system by 
+forming the sum of the weighted digits. For example, octal 736.4 is converted 
+to decimal as follows: 
+(736.4), = 7 X 82 + 3 X 8
+1 + 6 X 8° + 4 X 8-I 
+= 7 X 64 + 3 X 8 + 6 X 1 + 4/8 = (478.5)1
+0 
+The equivalent decimal number of hexadecimal F3 is obtained from the following calculation: 
+(F3)J6 = F X 16 + 3 = 15 X 16 + 3 = (243)10 
+Conversion from decimal to its equivalent representation in the radix r system 
+is carried out by separating the number into its integer and fraction parts and 
+SECTION 3-1 Data Types 69 
+converting each part separately. The conversion of a decimal integer into a base 
+r representation is done by successive divisions by r and accumulation of the 
+remainders. The conversion of a decimal fraction to radix r representation is 
+accomplished by successive multiplications by r and accumulation of the integer digits so obtained. Figure 3-1 demonstrates these procedures. 
+The conversion of decimal 4L6875 into binary is done by first separating 
+the number into its integer part 41 and fraction part .6875. The integer part is 
+converted by dividing 41 by r = 2 to give an integer quotient of 20 and a 
+remainder of L The quotient is again divided by 2 to give a new quotient and 
+remainder. This process is repeated until the integer quotient becomes 0. The 
+coefficients of the binary number are obtained from the remainders with the 
+first remainder giving the low-order bit of the converted binary number. 
+The fraction part is converted by multiplying it by r = 2 to give an integer 
+and a fraction. The new fraction (without the integer) is multiplied again by 2 
+to give a new integer and a new fraction. This process is repeated until the 
+fraction part becomes zero or until the number of digits obtained gives the 
+required accuracy. The coefficients of the binary fraction are obtained from 
+the integer digits with the first integer computed being the digit to be placed 
+next to the binary point. Finally, the two parts are combined to give the total 
+required conversion. 
+Octal and Hexadecimal Numbershivam kumar singh
